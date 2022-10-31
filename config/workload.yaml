@@ -13,9 +13,9 @@ spec:
   serviceClaims:
     - name: db
       ref:
-        apiVersion: sql.tanzu.vmware.com/v1
-        kind: Postgres
-        name: customer-profile-database
+        apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+        kind: ResourceClaim
+        name: psql-bridget
   build:
     env:
       - name: BP_JVM_VERSION
